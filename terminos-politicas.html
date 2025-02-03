@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAMCHE</title>
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background-color: #ffffff;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 3px solid #007bff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #007bff;
+            margin-left: 20px;
+            background-image: url('logo.jpg'); 
+            background-size: cover;
+            background-position: center;
+        }
+        .banner {
+            flex-grow: 1;
+            height: 150px;
+            background-color: white;
+            margin-left: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .banner img {
+            max-width: 80%;
+            max-height: 100%;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background-color: #007bff;
+            padding: 15px;
+        }
+        .nav button {
+            background-color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            color: #007bff;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .nav button:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+        .nav button a {       
+            color: #007bff;
+            text-decoration: #007bff;
+         }
+         .nav button a:hover {       
+            background-color: #0056b3;
+            color: white;
+         }
+
+
+        .terms-section {
+            padding: 40px;
+            background-color: white;
+            border-top: 3px solid #007bff;
+            flex-grow: 1; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+        }
+        .terms-section h2 {
+            font-size: 24px;
+            color: #007bff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .terms-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            justify-content: center;
+        }
+        .terms-card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #dee2e6;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            text-align: center;
+        }
+        .terms-card:hover {
+            transform: translateY(-5px);
+        }
+        .terms-card h3 {
+            font-size: 20px;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+        .terms-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+        .terms-card ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .terms-card li {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: #343a40;
+            color: white;
+            padding: 15px;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+            .banner {
+                width: 100%;
+                margin: 10px 0;
+            }
+            .nav {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .terms-container {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="banner">
+            <img src="banner.jpg" alt="Banner">
+        </div>
+    </div>
+
+    <div class="nav">
+        <button><a href="index.html">INICIO</a> </button>
+        <button><a href="productos.html">PRODUCTOS</a> </button>
+        <button style="display: none;"><a href="">PEDIR</a></button>
+        <button><a href="terminos-politicas.html">TÉRMINOS</a></button>
+        <button><a href="acercade.html">ACERCA DE</a></button>
+        <button style="display: none;"><a href="">INICIA SESIÓN</a></button>
+    </div>
+
+    <div id="terms-section" class="terms-section">
+        <h2>TÉRMINOS Y POLÍTICAS</h2>
+        <div class="terms-container">
+            <div class="terms-card">
+                <h3>Términos de Servicio</h3>
+                <p>Bienvenido a JAMCHE. Al utilizar este sitio web, aceptas cumplir con los siguientes términos y condiciones:</p>
+                <ul>
+                    <li>No utilices este sitio para actividades ilegales.</li>
+                    <li>El contenido del sitio es propiedad de JAMCHE y no puede ser utilizado sin permiso.</li>
+                    <li>Nos reservamos el derecho de modificar estos términos en cualquier momento.</li>
+                </ul>
+            </div>
+            <div class="terms-card">
+                <h3>Política de Privacidad</h3>
+                <p>En JAMCHE, nos comprometemos a proteger tu privacidad:</p>
+                <ul>
+                    <li>No compartimos tus datos personales con terceros.</li>
+                    <li>Tu información se utiliza únicamente para mejorar tu experiencia en el sitio.</li>
+                    <li>Puedes solicitar la eliminación de tus datos en cualquier momento.</li>
+                </ul>
+            </div>
+            <div class="terms-card">
+                <h3>Política de Cookies</h3>
+                <p>Utilizamos cookies para mejorar tu experiencia en nuestro sitio:</p>
+                <ul>
+                    <li>Las cookies nos ayudan a recordar tus preferencias.</li>
+                    <li>Puedes desactivar las cookies en la configuración de tu navegador.</li>
+                    <li>No almacenamos información sensible en las cookies.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span>&copy; TODOS LOS DERECHOS RESERVADOS 2025</span>
+        <span>JAMCHE - REPOSTERÍA FRÍA</span>
+    </div>
+ 
+</body>
+</html>
